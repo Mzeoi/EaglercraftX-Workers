@@ -1,0 +1,31 @@
+name = "eaglerx-cf-worker"
+main = "src/index.js"
+compatibility_date = "2025-05-01"
+
+# Durable Object: one instance per WebSocket session (SQLite backend is
+# required on the Workers Free plan).
+[[durable_objects.bindings]]
+name = "EAGLER_SESSION"
+class_name = "EaglerSession"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["EaglerSession"]
+
+[observability]
+enabled = true
+
+[vars]
+TARGET_URL = "35.211.238.129:25565"
+PROXY_MODE = "eagler"
+ALLOW_DYNAMIC_TARGET = "false"
+ALLOWED_TARGETS = ""
+ACCESS_TOKEN = ""
+SERVER_NAME = "EaglerX CF Worker"
+SERVER_BRAND = "EaglerXCF"
+SERVER_VERSION = "1.1.1"
+MIN_MC_PROTOCOL = "47"
+MAX_MC_PROTOCOL = "800"
+COMPAT_MODE = "true"
+
+VERBOSE = "false"

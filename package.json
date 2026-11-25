@@ -1,0 +1,15 @@
+{
+  "name": "eaglerx-cf-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Workers port of EaglerXPaper: WSS-to-TCP proxy & Eaglercraft-to-Minecraft protocol bridge with configurable target URL.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}
